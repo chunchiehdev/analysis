@@ -24,14 +24,14 @@ class DocumentService:
             return DocumentResponse(
                 file_name=filename,
                 text_content=result.text_content,
-                processed_at=datetime.utcnow(),
+                processed_at=datetime.now(),
                 success=True
             )
         except Exception as e:
             return DocumentResponse(
                 file_name=filename,
                 text_content="",
-                processed_at=datetime.utcnow(),
+                processed_at=datetime.now(),
                 success=False,
                 error=str(e)
             )
